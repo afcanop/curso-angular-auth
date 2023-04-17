@@ -26,4 +26,7 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
+    - name: instalar dependencias
+    - run: npm ci
+    - name: run test
     - run: npm test --no-watch --code-coverage --browsers=ChromeHeadlessCI
